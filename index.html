@@ -6,23 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Unity Web Player | Life Is A Fashion Show</title>
     <style>
-      body {
+      html, body {
         margin: 0;
         padding: 0;
+        /* Permitimos que el cuerpo sea un poco más alto que la pantalla para habilitar el scroll */
         width: 100vw;
-        height: 100vh;
-        background: #231F20; /* Color de fondo que tenías */
+        height: 120vh; 
+        background: #231F20;
         display: flex;
         justify-content: center;
-        align-items: center;
-        overflow: hidden;
+        /* Alineamos arriba para que, al hacer scroll, el juego se vea bien */
+        align-items: flex-start; 
+        overflow-y: scroll; /* Habilitamos scroll vertical */
       }
+      
       #unity-canvas {
         width: 100vw;
-        height: 56.25vw; /* Mantiene la proporción 16:9 */
-        max-height: 100vh;
-        max-width: 177.78vh; /* Mantiene la proporción 16:9 */
+        height: 56.25vw;
+        max-height: 90vh; /* Un poco menos de 100vh para dejar espacio al scroll */
+        max-width: 177.78vh;
         object-fit: contain;
+        margin-top: 10px; /* Un pequeño margen superior */
       }
     </style>
   </head>
